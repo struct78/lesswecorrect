@@ -9,6 +9,6 @@ nohup python lesswecorrect.py > output.log &
 
 Then close the screen
 ```
+Ctrl+A
 Ctrl+D
-A
 ```
