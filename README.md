@@ -1,4 +1,4 @@
-# lesswecorrect
+# Less We Correct
 A Twitter bot that corrects people who say "less we forget" instead of "lest we forget"
 
 To run as a bot, simply follow these instructions:
