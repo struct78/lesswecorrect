@@ -5,6 +5,7 @@
  
 import tweepy
 import json
+import re
 
 from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
@@ -26,7 +27,7 @@ def correct(data):
 	if not tweet.get('retweeted_status'):
 		for phrase in phrases:
 			# We have to do regex match because streaming tracking doesn't allow us to match whole phrases
-			if text.find(phrase):
+			if re.search(phrase, text, flags=re.IGNORECASE):
 				id = tweet['id']
 				username = tweet['user']['screen_name']
 				reply = 'It\'s actually "Lest We Forget", @%s' % (username)
