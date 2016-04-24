@@ -30,7 +30,7 @@ def correct(data):
 			if re.search(phrase, text, flags=re.IGNORECASE):
 				id = tweet['id']
 				username = tweet['user']['screen_name']
-				reply = 'It\'s actually "Lest We Forget", @%s' % (username)
+				reply = "*Lest https://twitter.com/%s/status/%s" % (username, id)
 
 				api.update_status(status=reply, in_reply_to_status_id=id)
 				break
